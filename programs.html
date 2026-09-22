@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPOWER GYM Programs | Strength, Cardio & Fitness in Baramati</title>
+    <meta name="description" content="Explore strength training, cardio, cycling and fitness options at MPOWER GYM in Baramati, Maharashtra.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        surface: '#1A1A1A',
+                        surfaceLight: '#262626',
+                        accent: '#DC2626', // Strong Red Accent (editable)
+                        muted: '#9CA3AF'
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+        .glass-nav {
+            background: rgba(18, 18, 18, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-primary text-white antialiased selection:bg-accent selection:text-white">
+
+    <!-- LOCALBUSINESS SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Gym",
+      "name": "MPOWER GYM",
+      "image": "",
+      "@id": "",
+      "url": "",
+      "telephone": "+918830319462",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manpasand Collection, Ambika Nagar, Pushpak Apartment",
+        "addressLocality": "Baramati",
+        "addressRegion": "Maharashtra",
+        "postalCode": "413102",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "05:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "07:00",
+          "closes": "10:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="font-oswald text-2xl sm:text-3xl tracking-wider font-bold text-white group-hover:text-accent transition-colors">
+                    MPOWER<span class="text-accent">.</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex items-center gap-8 font-medium text-sm tracking-wide">
+                <a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="text-gray-300 hover:text-accent transition-colors">About</a>
+                <a href="programs.html" class="text-accent font-semibold transition-colors">Programs</a>
+                <a href="membership.html" class="text-gray-300 hover:text-accent transition-colors">Membership</a>
+                <a href="contact.html" class="text-gray-300 hover:text-accent transition-colors">Contact</a>
+            </div>
+
+            <!-- Right CTA & Phone -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:+918830319462" class="flex items-center gap-2 bg-surface hover:bg-surfaceLight border border-white/10 px-4 py-2.5 rounded text-sm font-semibold tracking-wider transition-all">
+                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <span>+91 88303 19462</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden text-white focus:outline-none p-2">
+                <div class="w-6 h-5 flex flex-col justify-between">
+                    <span class="w-full h-0.5 bg-white transition-all transform origin-left" id="line1"></span>
+                    <span class="w-full h-0.5 bg-white transition-all" id="line2"></span>
+                    <span class="w-full h-0.5 bg-white transition-all transform origin-left" id="line3"></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-primary border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-lg font-medium text-gray-300 hover:text-accent">Home</a>
+            <a href="about.html" class="block text-lg font-medium text-gray-300 hover:text-accent">About</a>
+            <a href="programs.html" class="block text-lg font-semibold text-accent">Programs</a>
+            <a href="membership.html" class="block text-lg font-medium text-gray-300 hover:text-accent">Membership</a>
+            <a href="contact.html" class="block text-lg font-medium text-gray-300 hover:text-accent">Contact</a>
+            <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+                <a href="tel:+918830319462" class="flex items-center justify-center gap-2 bg-surface border border-white/10 py-3 rounded text-sm font-semibold">
+                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <span>CALL +91 88303 19462</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-surface overflow-hidden border-b border-white/10">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- IMAGE INSTRUCTION: Replace with high quality fitness/programs hero background image -->
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" alt="MPOWER GYM Programs Workout Environment" class="w-full h-full object-cover opacity-35 scale-105 transition-transform duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Breadcrumb -->
+            <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold tracking-widest text-muted mb-4 uppercase">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span>/</span>
+                <span class="text-accent">Programs</span>
+            </div>
+            
+            <p class="text-accent font-semibold tracking-widest uppercase text-sm mb-3">TRAINING & PROGRAMS</p>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 font-oswald">
+                “FIND YOUR STRONG.”
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                Train with purpose through strength, cardio and fitness-focused workouts at MPOWER GYM, Baramati.
+            </p>
+            
+            <!-- Accent Line -->
+            <div class="w-24 h-1 bg-accent mx-auto mt-8"></div>
+        </div>
+    </header>
+
+    <!-- PROGRAM OVERVIEW -->
+    <section class="py-20 lg:py-28 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-accent font-semibold text-sm tracking-widest uppercase">WHAT WE OFFER</span>
+                <h2 class="text-3xl sm:text-5xl font-bold mt-2 mb-4">TRAIN FOR YOUR GOAL.</h2>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Different goals need different training approaches. Explore the core workout options available at MPOWER GYM and choose the routine that fits your fitness journey.
+                </p>
+            </div>
+
+            <!-- 4 PROGRAM CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- PROGRAM CARD 01: STRENGTH TRAINING -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden group hover:border-accent/50 transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- IMAGE INSTRUCTION: Replace with strength training facility image -->
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="Strength Training at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary/90 text-accent font-oswald text-xl px-3 py-1 rounded font-bold border border-white/10">01</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">STRENGTH TRAINING</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Build strength through focused resistance-based workouts and consistent training.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20am%20interested%20in%20strength%20training.%20Please%20share%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full bg-primary hover:bg-accent text-white font-semibold text-sm tracking-wider uppercase px-5 py-3 rounded border border-white/10 transition-colors group/btn">
+                            <span>ASK ABOUT STRENGTH TRAINING</span>
+                            <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROGRAM CARD 02: CARDIO -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden group hover:border-accent/50 transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- IMAGE INSTRUCTION: Replace with cardio area image -->
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" alt="Cardio Training at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary/90 text-accent font-oswald text-xl px-3 py-1 rounded font-bold border border-white/10">02</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">CARDIO</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Improve endurance and cardiovascular fitness through dedicated cardio-based workouts.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20am%20interested%20in%20cardio%20training.%20Please%20share%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full bg-primary hover:bg-accent text-white font-semibold text-sm tracking-wider uppercase px-5 py-3 rounded border border-white/10 transition-colors group/btn">
+                            <span>ASK ABOUT CARDIO</span>
+                            <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROGRAM CARD 03: CYCLING -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden group hover:border-accent/50 transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- IMAGE INSTRUCTION: Replace with cycling workout image -->
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Cycling Workout at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary/90 text-accent font-oswald text-xl px-3 py-1 rounded font-bold border border-white/10">03</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">CYCLING</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Add cycling-based activity to your fitness routine and make your workouts more dynamic.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20am%20interested%20in%20cycling.%20Please%20share%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full bg-primary hover:bg-accent text-white font-semibold text-sm tracking-wider uppercase px-5 py-3 rounded border border-white/10 transition-colors group/btn">
+                            <span>ASK ABOUT CYCLING</span>
+                            <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROGRAM CARD 04: GENERAL FITNESS -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden group hover:border-accent/50 transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- IMAGE INSTRUCTION: Replace with general fitness workout image -->
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="General Fitness at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary/90 text-accent font-oswald text-xl px-3 py-1 rounded font-bold border border-white/10">04</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">GENERAL FITNESS</h3>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Build a consistent workout routine focused on staying active, fit and stronger.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20want%20to%20know%20which%20workout%20option%20is%20suitable%20for%20me." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full bg-primary hover:bg-accent text-white font-semibold text-sm tracking-wider uppercase px-5 py-3 rounded border border-white/10 transition-colors group/btn">
+                            <span>START YOUR JOURNEY</span>
+                            <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GOAL-BASED SECTION -->
+    <section class="py-20 bg-surface border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-accent font-semibold text-sm tracking-widest uppercase">YOUR GOAL MATTERS</span>
+                <h2 class="text-3xl sm:text-5xl font-bold mt-2 mb-4">WHAT ARE YOU TRAINING FOR?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Goal Card 1 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg hover:border-accent transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">BUILD STRENGTH</h3>
+                        <p class="text-gray-400 text-sm mb-6">Focused resistance-based training to increase overall physical power.</p>
+                    </div>
+                    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20want%20to%20build%20strength." target="_blank" rel="noopener noreferrer" class="text-accent font-semibold text-sm uppercase tracking-wider flex items-center gap-1 hover:underline">
+                        <span>ENQUIRE</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Goal Card 2 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg hover:border-accent transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">IMPROVE FITNESS</h3>
+                        <p class="text-gray-400 text-sm mb-6">Build a consistent fitness routine tailored for daily health and tone.</p>
+                    </div>
+                    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20want%20to%20improve%20my%20fitness." target="_blank" rel="noopener noreferrer" class="text-accent font-semibold text-sm uppercase tracking-wider flex items-center gap-1 hover:underline">
+                        <span>ENQUIRE</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Goal Card 3 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg hover:border-accent transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">IMPROVE ENDURANCE</h3>
+                        <p class="text-gray-400 text-sm mb-6">Include cardio-focused activity to boost stamina and energy levels.</p>
+                    </div>
+                    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20want%20to%20improve%20endurance." target="_blank" rel="noopener noreferrer" class="text-accent font-semibold text-sm uppercase tracking-wider flex items-center gap-1 hover:underline">
+                        <span>ENQUIRE</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Goal Card 4 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg hover:border-accent transition-all duration-300 flex flex-col justify-between fade-in-up">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">STAY ACTIVE</h3>
+                        <p class="text-gray-400 text-sm mb-6">Make regular movement and structured exercise part of your lifestyle.</p>
+                    </div>
+                    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20want%20to%20stay%20active." target="_blank" rel="noopener noreferrer" class="text-accent font-semibold text-sm uppercase tracking-wider flex items-center gap-1 hover:underline">
+                        <span>ENQUIRE</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-20 lg:py-28 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-accent font-semibold text-sm tracking-widest uppercase">SIMPLE PROCESS</span>
+                <h2 class="text-3xl sm:text-5xl font-bold mt-2 mb-4">STARTING IS SIMPLE.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Step 01 -->
+                <div class="bg-surface border border-white/10 p-8 rounded-lg relative fade-in-up">
+                    <span class="text-accent font-oswald text-4xl font-bold block mb-4">01</span>
+                    <h3 class="text-2xl font-bold mb-3">Choose Your Goal</h3>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Tell us what you want to work on, whether it is strength, cardio, or general fitness.
+                    </p>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="bg-surface border border-white/10 p-8 rounded-lg relative fade-in-up">
+                    <span class="text-accent font-oswald text-4xl font-bold block mb-4">02</span>
+                    <h3 class="text-2xl font-bold mb-3">Visit MPOWER GYM</h3>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Come to the gym in Baramati and understand the available workout options and equipment.
+                    </p>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="bg-surface border border-white/10 p-8 rounded-lg relative fade-in-up">
+                    <span class="text-accent font-oswald text-4xl font-bold block mb-4">03</span>
+                    <h3 class="text-2xl font-bold mb-3">Start Training</h3>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Build your routine, stay consistent, and make fitness a part of your daily life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center fade-in-up">
+                <p class="text-muted text-sm italic">
+                    * Ask the gym about current membership options and free-trial availability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section class="py-20 bg-surface border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-accent font-semibold text-sm tracking-widest uppercase">FACILITIES & AMENITIES</span>
+                <h2 class="text-3xl sm:text-5xl font-bold mt-2 mb-4">TRAIN IN A COMFORTABLE ENVIRONMENT.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Facility 1 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg text-center fade-in-up">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">AIR CONDITIONING</h3>
+                    <p class="text-gray-400 text-sm">Comfortable workout environment for intense sessions.</p>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg text-center fade-in-up">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">PARKING</h3>
+                    <p class="text-gray-400 text-sm">Convenient parking facility for members and visitors.</p>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg text-center fade-in-up">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">WATER COOLER</h3>
+                    <p class="text-gray-400 text-sm">Water facility available to stay hydrated during workouts.</p>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="bg-primary border border-white/10 p-6 rounded-lg text-center fade-in-up">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-surface border border-white/10 flex items-center justify-center text-accent mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">WORKOUT EQUIPMENT</h3>
+                    <p class="text-gray-400 text-sm">Quality equipment for different training requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM GALLERY -->
+    <section class="py-20 lg:py-28 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-accent font-semibold text-sm tracking-widest uppercase">VISUAL TOUR</span>
+                <h2 class="text-3xl sm:text-5xl font-bold mt-2 mb-4">TRAINING ENVIRONMENT.</h2>
+                <p class="text-muted text-xs uppercase tracking-wider">Do NOT pretend stock images are photos of MPOWER GYM.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="relative h-72 rounded-lg overflow-hidden group border border-white/10 fade-in-up">
+                    <!-- IMAGE INSTRUCTION: Replace with strength area image -->
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Strength Area at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-oswald text-lg font-bold tracking-wider">Strength Area</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative h-72 rounded-lg overflow-hidden group border border-white/10 fade-in-up">
+                    <!-- IMAGE INSTRUCTION: Replace with cardio zone image -->
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" alt="Cardio Zone at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-oswald text-lg font-bold tracking-wider">Cardio Zone</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="relative h-72 rounded-lg overflow-hidden group border border-white/10 fade-in-up">
+                    <!-- IMAGE INSTRUCTION: Replace with cycling setup image -->
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Cycling Setup at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-oswald text-lg font-bold tracking-wider">Cycling Setup</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="relative h-72 rounded-lg overflow-hidden group border border-white/10 fade-in-up">
+                    <!-- IMAGE INSTRUCTION: Replace with gym interior image -->
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" alt="Gym Interior at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-oswald text-lg font-bold tracking-wider">Gym Interior</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="relative h-72 rounded-lg overflow-hidden group border border-white/10 fade-in-up">
+                    <!-- IMAGE INSTRUCTION: Replace with workout equipment image -->
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="Workout Equipment at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-oswald text-lg font-bold tracking-wider">Workout Equipment</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="relative h-72 rounded-lg overflow-hidden group border border-white/10 fade-in-up">
+                    <!-- IMAGE INSTRUCTION: Replace with training floor image -->
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Training Floor at MPOWER GYM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-oswald text-lg font-bold tracking-wider">Training Floor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE TRIAL CTA -->
+    <section class="py-20 bg-surface border-y border-white/10 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in-up">
+            <h2 class="text-3xl sm:text-5xl font-bold mb-4">NOT SURE WHERE TO START?</h2>
+            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+                Ask MPOWER GYM about the available free trial and find the right starting point for your fitness routine.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20would%20like%20to%20know%20about%20the%20free%20trial%20and%20available%20training%20options." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-accent hover:bg-red-700 text-white font-semibold tracking-wider uppercase px-8 py-4 rounded transition-colors text-center">
+                    ASK ABOUT FREE TRIAL
+                </a>
+                <a href="tel:+918830319462" class="w-full sm:w-auto bg-primary hover:bg-surfaceLight border border-white/10 text-white font-semibold tracking-wider uppercase px-8 py-4 rounded transition-colors text-center">
+                    CALL NOW
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 lg:py-28 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-accent font-semibold text-sm tracking-widest uppercase">COMMON QUESTIONS</span>
+                <h2 class="text-3xl sm:text-5xl font-bold mt-2 mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden fade-in-up">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-oswald text-lg font-semibold flex items-center justify-between focus:outline-none">
+                        <span>What workout options are available at MPOWER GYM?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Publicly listed options include strength training, cardio and cycling. Contact the gym for the latest program details.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden fade-in-up">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-oswald text-lg font-semibold flex items-center justify-between focus:outline-none">
+                        <span>Is a free trial available?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        A free trial is publicly listed. Please contact MPOWER GYM to confirm current availability and conditions.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden fade-in-up">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-oswald text-lg font-semibold flex items-center justify-between focus:outline-none">
+                        <span>What are the gym timings?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Monday to Saturday: 5:00 AM – 10:00 PM. Sunday: 7:00 AM – 10:00 AM.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden fade-in-up">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-oswald text-lg font-semibold flex items-center justify-between focus:outline-none">
+                        <span>Where is MPOWER GYM located?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Manpasand Collection, Ambika Nagar, Pushpak Apartment, Baramati, Maharashtra – 413102.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden fade-in-up">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-oswald text-lg font-semibold flex items-center justify-between focus:outline-none">
+                        <span>How can I enquire about membership?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Use the WhatsApp or Call buttons to contact MPOWER GYM directly.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-surface border border-white/10 rounded-lg overflow-hidden fade-in-up">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-oswald text-lg font-semibold flex items-center justify-between focus:outline-none">
+                        <span>Are membership prices available online?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Do not display an invented price. Ask the gym directly for current membership plans and pricing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION MINI SECTION -->
+    <section class="py-20 bg-surface border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary border border-white/10 rounded-lg p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center fade-in-up">
+                <div>
+                    <span class="text-accent font-semibold text-sm tracking-widest uppercase">VISIT US TODAY</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">READY TO TRAIN?</h2>
+                    <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">
+                        Manpasand Collection, Ambika Nagar, Pushpak Apartment,<br>
+                        Baramati, Maharashtra – 413102, India
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400 mb-8">
+                        <p><strong class="text-white">Phone:</strong> +91 88303 19462</p>
+                        <p><strong class="text-white">Hours:</strong> Mon–Sat: 5:00 AM – 10:00 PM | Sun: 7:00 AM – 10:00 AM</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Manpasand+Collection+Ambika+Nagar+Pushpak+Apartment+Baramati+Maharashtra+413102" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-red-700 text-white font-semibold text-sm tracking-wider uppercase px-6 py-3 rounded transition-colors">
+                            GET DIRECTIONS
+                        </a>
+                        <a href="tel:+918830319462" class="bg-surface hover:bg-surfaceLight border border-white/10 text-white font-semibold text-sm tracking-wider uppercase px-6 py-3 rounded transition-colors">
+                            CALL
+                        </a>
+                        <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20would%20like%20to%20know%20more%20about%20the%20gym." target="_blank" rel="noopener noreferrer" class="bg-surface hover:bg-surfaceLight border border-white/10 text-white font-semibold text-sm tracking-wider uppercase px-6 py-3 rounded transition-colors">
+                            WHATSAPP
+                        </a>
+                    </div>
+                </div>
+                <div class="h-80 rounded-lg overflow-hidden border border-white/10">
+                    <!-- Embedded Google Map Search Query -->
+                    <iframe title="MPOWER GYM Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.210948924019!2d74.5788!3d18.1508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA5JzAyLjkiTiA3NMKwMzQnNDMuNyJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary border-t border-white/10 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <!-- Brand -->
+            <div>
+                <a href="index.html" class="inline-block font-oswald text-2xl font-bold tracking-wider text-white mb-4">
+                    MPOWER<span class="text-accent">.</span>
+                </a>
+                <p class="text-gray-400 text-sm italic mb-4">“Train Hard. Live Strong.”</p>
+                <p class="text-gray-400 text-xs">Baramati, Maharashtra</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-oswald text-lg font-semibold mb-4 tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="text-gray-400 hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors">About</a></li>
+                    <li><a href="programs.html" class="text-gray-400 hover:text-accent transition-colors">Programs</a></li>
+                    <li><a href="membership.html" class="text-gray-400 hover:text-accent transition-colors">Membership</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="font-oswald text-lg font-semibold mb-4 tracking-wider">Contact</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>Phone: <a href="tel:+918830319462" class="text-white hover:text-accent">+91 88303 19462</a></li>
+                    <li>Location: Baramati, Maharashtra</li>
+                </ul>
+            </div>
+
+            <!-- Hours -->
+            <div>
+                <h4 class="font-oswald text-lg font-semibold mb-4 tracking-wider">Hours</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>Mon–Sat: 5:00 AM – 10:00 PM</li>
+                    <li>Sun: 7:00 AM – 10:00 AM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-muted">
+            <p>© 2026 MPOWER GYM. All rights reserved.</p>
+            <p class="mt-4 sm:mt-0">Website concept by Aarya Technologies</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20would%20like%20to%20know%20more%20about%20the%20available%20programs." target="_blank" rel="noopener noreferrer" aria-label="Chat with MPOWER GYM on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group flex items-center gap-2">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-semibold tracking-wider uppercase pr-1">Chat with MPOWER GYM</span>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            line1.style.transform = isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none';
+            line2.style.opacity = isOpen ? '0' : '1';
+            line3.style.transform = isOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
+        });
+
+        // Navbar Scroll Blur effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // FAQ Accordion functionality
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('svg');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                
+                // Close others
+                faqBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.nextElementSibling.classList.add('hidden');
+                        otherBtn.querySelector('svg').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // IntersectionObserver for Fade-Up animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
