@@ -11,8 +11,878 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Embedded Stylesheet -->
+    <style>
+        /* =========================================
+           MPOWER GYM - STYLESHEET (style.css)
+           Matches Pages 1, 2, and 3 Exactly
+           ========================================= */
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-card: #1c1c1c;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent-color: #ff3b30; /* Signature energy red/orange */
+            --accent-hover: #e03229;
+            --border-color: #2a2a2a;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .max-w-700 { max-width: 700px; }
+        .max-w-800 { max-width: 800px; }
+        .bg-alt { background-color: var(--bg-secondary); }
+        .text-center { text-align: center; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-full-mobile {
+            width: 100%;
+        }
+
+        /* Eyebrow & Headers */
+        .eyebrow {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* NAVBAR */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-text .accent {
+            color: var(--accent-color);
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-call-btn {
+            padding: 8px 18px;
+            font-size: 0.9rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .hamburger .bar {
+            width: 28px;
+            height: 3px;
+            background-color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .hero-content-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb span {
+            color: var(--accent-color);
+        }
+
+        .main-heading {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .supporting-text {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* HIGHLIGHTS GRID */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .highlight-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 35px 25px;
+            border-radius: 6px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .highlight-icon {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .highlight-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .highlight-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* MEMBERSHIP PLANS CARDS */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .plan-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .plan-card.highlighted {
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(255, 59, 48, 0.15);
+            transform: scale(1.02);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            right: 30px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .plan-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .plan-price {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .plan-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .plan-footer .btn {
+            width: 100%;
+        }
+
+        /* FREE TRIAL SECTION */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .trial-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .trial-content p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .trial-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .trial-image-wrapper .image-box {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .trial-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .trial-image-wrapper img:hover {
+            transform: scale(1.03);
+        }
+
+        /* WHAT YOU GET / FACILITIES */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .facility-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 6px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .facility-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .facility-icon {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .facility-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .facility-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* ENQUIRY SECTION */
+        .enquiry-form {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .form-group label .required {
+            color: var(--accent-color);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2);
+        }
+
+        .error-msg {
+            display: none;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .form-group.error input,
+        .form-group.error select {
+            border-color: var(--accent-color);
+        }
+
+        .form-group.error .error-msg {
+            display: block;
+        }
+
+        /* TRUST SECTION */
+        .trust-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* FAQ SECTION */
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 25px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-question i {
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: linear-gradient(rgba(20,20,20,0.9), rgba(20,20,20,0.9)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cta-banner h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .cta-banner p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-banner-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* LOCATION SECTION */
+        .address-text {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .phone-hours-info {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .phone-hours-info a {
+            color: var(--text-primary);
+        }
+
+        .location-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a, .footer-col p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-col p i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* FLOATING WHATSAPP */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .highlights-grid,
+            .plans-grid,
+            .facilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--bg-primary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s ease;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+
+            .nav-call-btn {
+                display: none;
+            }
+
+            .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .highlights-grid,
+            .plans-grid,
+            .facilities-grid,
+            .grid-2col,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .enquiry-form {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+
     <!-- LocalBusiness Schema -->
     <script type="application/ld+json">
     {
@@ -433,7 +1303,176 @@
         <span class="whatsapp-tooltip">Chat with MPOWER GYM</span>
     </a>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- Embedded JavaScript -->
+    <script>
+        /* =========================================
+           MPOWER GYM - SCRIPT (script.js)
+           Matches Pages 1, 2, and 3 Exactly
+           ========================================= */
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* ==========================================
+               1. MEMBERSHIP PLAN DATA & RENDER SYSTEM
+               Easily editable data structure for business owner
+               ========================================= */
+               
+            // Replace "ASK FOR CURRENT PRICE" with the actual MPOWER GYM price when available.
+            const membershipPlans = [
+                {
+                    name: "Monthly",
+                    price: "ASK FOR CURRENT PRICE",
+                    description: "A simple option for those who want to start their regular fitness routine.",
+                    badge: "STARTER OPTION",
+                    whatsappMessage: "Hello MPOWER GYM, I would like to know the current monthly membership price and details.",
+                    buttonText: "GET MONTHLY DETAILS",
+                    highlighted: false
+                },
+                {
+                    name: "Quarterly",
+                    price: "ASK FOR CURRENT PRICE",
+                    description: "Suitable for members planning to stay consistent over a longer training period.",
+                    badge: "",
+                    whatsappMessage: "Hello MPOWER GYM, I would like to know the current quarterly membership price and details.",
+                    buttonText: "GET QUARTERLY DETAILS",
+                    highlighted: true // Highlight middle card slightly without calling it "Best Plan"
+                },
+                {
+                    name: "Long-Term",
+                    price: "ASK FOR CURRENT PRICE",
+                    description: "Ask about longer-duration membership options currently available.",
+                    badge: "",
+                    whatsappMessage: "Hello MPOWER GYM, I would like to know the current long-term membership options and pricing.",
+                    buttonText: "GET LONG-TERM DETAILS",
+                    highlighted: false
+                }
+            ];
+
+            const plansGrid = document.getElementById('plansGrid');
+            if (plansGrid) {
+                plansGrid.innerHTML = membershipPlans.map(plan => `
+                    <div class="plan-card ${plan.highlighted ? 'highlighted' : ''}">
+                        ${plan.badge ? `<span class="plan-badge">${plan.badge}</span>` : ''}
+                        <div class="plan-header">
+                            <h3>${plan.name}</h3>
+                            <div class="plan-price">${plan.price}</div>
+                        </div>
+                        <p class="plan-desc">${plan.description}</p>
+                        <div class="plan-footer">
+                            <a href="https://wa.me/918830319462?text=${encodeURIComponent(plan.whatsappMessage)}" target="_blank" class="btn btn-primary">
+                                <i class="fa-brands fa-whatsapp"></i> ${plan.buttonText}
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            /* ==========================================
+               2. MOBILE NAVBAR TOGGLE
+               ========================================= */
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking a link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+
+            /* ==========================================
+               3. FAQ ACCORDION FUNCTIONALITY
+               ========================================= */
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.faq-question');
+                questionBtn.addEventListener('click', () => {
+                    faqItems.forEach(other => {
+                        if (other !== item) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    item.classList.toggle('active');
+                });
+            });
+
+            /* ==========================================
+               4. MEMBERSHIP ENQUIRY FORM VALIDATION & WHATSAPP REDIRECT
+               ========================================= */
+            const enquiryForm = document.getElementById('membershipEnquiryForm');
+
+            if (enquiryForm) {
+                enquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const nameInput = document.getElementById('enquiryName');
+                    const phoneInput = document.getElementById('enquiryPhone');
+                    const planSelect = document.getElementById('enquiryPlan');
+                    const goalSelect = document.getElementById('enquiryGoal');
+                    const timeSelect = document.getElementById('enquiryTime');
+
+                    let isValid = true;
+
+                    if (!nameInput.value.trim()) {
+                        nameInput.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        nameInput.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!phoneInput.value.trim() || phoneInput.value.trim().length < 8) {
+                        phoneInput.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        phoneInput.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!planSelect.value) {
+                        planSelect.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        planSelect.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!goalSelect.value) {
+                        goalSelect.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        goalSelect.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!timeSelect.value) {
+                        timeSelect.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        timeSelect.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (isValid) {
+                        const name = nameInput.value.trim();
+                        const phone = phoneInput.value.trim();
+                        const plan = planSelect.value;
+                        const goal = goalSelect.value;
+                        const time = timeSelect.value;
+
+                        const message = `Hello MPOWER GYM,\nMy name is ${name}.\nI am interested in the ${plan} membership.\nMy goal is ${goal}.\nPreferred training time: ${time}.\nContact number: ${phone}.\nPlease share the current membership details and pricing.`;
+                        
+                        const whatsappUrl = `https://wa.me/918830319462?text=${encodeURIComponent(message)}`;
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
+            }
+
+        });
+    </script>
 </body>
 </html>
