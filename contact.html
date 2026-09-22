@@ -1,1 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact MPOWER GYM | Fitness Gym in Baramati</title>
+    <meta name="description" content="Get in touch with MPOWER GYM in Baramati, Maharashtra. Find our address, phone number, working hours, and send us a direct WhatsApp enquiry.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Embedded Stylesheet -->
+    <style>
+        /* =========================================
+           MPOWER GYM - STYLESHEET (style.css)
+           Matches Pages 1, 2, 3, and 4 Exactly
+           ========================================= */
 
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-card: #1c1c1c;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent-color: #ff3b30; /* Signature energy red/orange */
+            --accent-hover: #e03229;
+            --border-color: #2a2a2a;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .max-w-700 { max-width: 700px; }
+        .max-w-800 { max-width: 800px; }
+        .bg-alt { background-color: var(--bg-secondary); }
+        .text-center { text-align: center; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-full-mobile {
+            width: 100%;
+        }
+
+        /* Eyebrow & Headers */
+        .eyebrow {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* NAVBAR */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-text .accent {
+            color: var(--accent-color);
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-call-btn {
+            padding: 8px 18px;
+            font-size: 0.9rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .hamburger .bar {
+            width: 28px;
+            height: 3px;
+            background-color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .hero-content-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb span {
+            color: var(--accent-color);
+        }
+
+        .main-heading {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .supporting-text {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* CONTACT SECTION LAYOUT */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .align-start {
+            align-items: flex-start;
+        }
+
+        /* INFO CARDS */
+        .contact-info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            background-color: rgba(255, 59, 48, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .contact-details p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .contact-details a {
+            color: var(--text-primary);
+        }
+
+        .contact-details a:hover {
+            color: var(--accent-color);
+        }
+
+        /* ENQUIRY FORM */
+        .enquiry-form-wrapper {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .form-group label .required {
+            color: var(--accent-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2);
+        }
+
+        .error-msg {
+            display: none;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: var(--accent-color);
+        }
+
+        .form-group.error .error-msg {
+            display: block;
+        }
+
+        /* MAP SECTION */
+        .map-wrapper {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--bg-card);
+            margin-top: 40px;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* FAQ SECTION */
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 25px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-question i {
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: linear-gradient(rgba(20,20,20,0.9), rgba(20,20,20,0.9)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cta-banner h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .cta-banner p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-banner-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a, .footer-col p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-col p i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* FLOATING WHATSAPP */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--bg-primary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s ease;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+
+            .nav-call-btn {
+                display: none;
+            }
+
+            .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .enquiry-form-wrapper {
+                padding: 25px 20px;
+            }
+
+            .map-container {
+                height: 350px;
+            }
+        }
+    </style>
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MPOWER GYM",
+      "image": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manpasand Collection, Ambika Nagar, Pushpak Apartment",
+        "addressLocality": "Baramati",
+        "addressRegion": "Maharashtra",
+        "postalCode": "413102",
+        "addressCountry": "IN"
+      },
+      "telephone": "+918830319462",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "05:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "07:00",
+          "closes": "22:00"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">MPOWER <span class="accent">GYM</span></span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="tel:+918830319462" class="btn btn-outline nav-call-btn">
+                    <i class="fa-solid fa-phone"></i> <span>CALL NOW</span>
+                </a>
+                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-content-container">
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a> / <span>CONTACT</span>
+            </div>
+            <span class="eyebrow">GET IN TOUCH</span>
+            <h1 class="main-heading">“CONNECT WITH MPOWER GYM.”</h1>
+            <p class="supporting-text">“Have questions about our training programs, timings, or memberships? Reach out to us directly or visit our facility in Baramati.”</p>
+            <div class="hero-cta-group">
+                <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20would%20like%20to%20get%20in%20touch." target="_blank" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
+                </a>
+                <a href="tel:+918830319462" class="btn btn-secondary">
+                    <i class="fa-solid fa-phone"></i> CALL +91 88303 19462
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT DETAILS & FORM SECTION -->
+    <section class="section contact-main-section">
+        <div class="container grid-2col align-start">
+            
+            <!-- LEFT COLUMN: CONTACT INFORMATION CARDS -->
+            <div class="contact-info-col">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <span class="eyebrow">REACH OUT</span>
+                    <h2>“CONTACT INFO”</h2>
+                    <p class="section-desc" style="margin: 0; max-width: none;">Visit our gym or connect with us instantly using phone or WhatsApp.</p>
+                </div>
+                
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Manpasand Collection, Ambika Nagar, Pushpak Apartment, Baramati, Maharashtra – 413102</p>
+                            <div style="margin-top: 10px;">
+                                <a href="https://maps.google.com/?q=Manpasand+Collection+Ambika+Nagar+Pushpak+Apartment+Baramati" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-map-location-dot"></i> GET DIRECTIONS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Number</h3>
+                            <p><a href="tel:+918830319462">+91 88303 19462</a></p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">Tap to call directly or connect on WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p><strong>Monday – Saturday:</strong> 5:00 AM – 10:00 PM</p>
+                            <p><strong>Sunday:</strong> 7:00 AM – 10:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: CONTACT FORM -->
+            <div class="contact-form-col">
+                <div class="enquiry-form-wrapper">
+                    <div class="section-header" style="margin-bottom: 25px;">
+                        <span class="eyebrow">SEND A MESSAGE</span>
+                        <h2>“QUICK ENQUIRY”</h2>
+                        <p class="section-desc" style="margin: 0; max-width: none; font-size: 0.95rem;">Fill out the form below to instantly dispatch your enquiry via WhatsApp.</p>
+                    </div>
+
+                    <form id="contactEnquiryForm" novalidate>
+                        <div class="form-group">
+                            <label for="contactName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
+                            <span class="error-msg" id="contactNameError">Please enter your name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number" required>
+                            <span class="error-msg" id="contactPhoneError">Please enter a valid phone number.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject / Interest <span class="required">*</span></label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="" disabled selected>Select subject</option>
+                                <option value="Membership Enquiry">Membership Enquiry</option>
+                                <option value="Free Trial">Free Trial</option>
+                                <option value="Training Programs">Training Programs</option>
+                                <option value="General Question">General Question</option>
+                            </select>
+                            <span class="error-msg" id="contactSubjectError">Please select a subject.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message <span class="required">*</span></label>
+                            <textarea id="contactMessage" name="message" placeholder="Type your message here..." required></textarea>
+                            <span class="error-msg" id="contactMessageError">Please write your message.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full-mobile">
+                            <i class="fa-brands fa-whatsapp"></i> SEND MESSAGE ON WHATSAPP
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="section map-section bg-alt" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="eyebrow">FIND US ON MAP</span>
+                <h2>“VISIT OUR GYM”</h2>
+                <p class="section-desc">Easily locate MPOWER GYM in Baramati using the interactive map below.</p>
+            </div>
+            <div class="map-wrapper">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.25810214619!2d74.5788!3d18.1500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3e0e7a2b00001%3A0x123456789abcdef!2sAmbika%20Nagar%2C%20Baramati%2C%20Maharashtra%20413102!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MPOWER GYM Location Map"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section faq-section">
+        <div class="container max-w-800">
+            <div class="section-header text-center">
+                <span class="eyebrow">GOT QUESTIONS?</span>
+                <h2>“FREQUENTLY ASKED QUESTIONS”</h2>
+                <p class="section-desc">Quick answers about visiting and contacting MPOWER GYM.</p>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>“Do I need an appointment to visit the gym?”</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>“No appointment is strictly necessary, but you can message us on WhatsApp or call ahead if you'd like someone to guide you through the facility upon arrival.”</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>“How fast do you respond on WhatsApp?”</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>“We are usually very responsive during operating hours. Feel free to drop your enquiry anytime!”</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>“Is parking available at the gym location?”</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>“Yes, parking space is conveniently available near our facility in Ambika Nagar, Baramati.”</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>“What are the weekend timings?”</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>“Saturday: 5:00 AM – 10:00 PM. Sunday: 7:00 AM – 10:00 AM.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section cta-banner">
+        <div class="container text-center">
+            <h2>“READY TO START TRAINING?”</h2>
+            <p>“Get in touch with MPOWER GYM today and take the first step towards your fitness goals.”</p>
+            <div class="cta-banner-buttons">
+                <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20want%20to%20start%20training." target="_blank" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> WHATSAPP US NOW
+                </a>
+                <a href="tel:+918830319462" class="btn btn-outline">
+                    <i class="fa-solid fa-phone"></i> CALL +91 88303 19462
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">MPOWER <span class="accent">GYM</span></div>
+                <p class="footer-tagline">“Train Hard. Live Strong.”</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+918830319462">+91 88303 19462</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Baramati, Maharashtra</p>
+                <p><i class="fa-solid fa-clock"></i> Mon–Sat: 5:00 AM – 10:00 PM<br>&nbsp;&nbsp;&nbsp;Sun: 7:00 AM – 10:00 AM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 MPOWER GYM. All rights reserved. Website concept by Aarya Technologies</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20have%20an%20enquiry." target="_blank" class="floating-whatsapp pulse-animation" aria-label="Chat with MPOWER GYM on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with MPOWER GYM</span>
+    </a>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        /* =========================================
+           MPOWER GYM - SCRIPT (script.js)
+           Matches Pages 1, 2, 3, and 4 Exactly
+           ========================================= */
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* ==========================================
+               1. MOBILE NAVBAR TOGGLE
+               ========================================= */
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking a link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+
+            /* ==========================================
+               2. FAQ ACCORDION FUNCTIONALITY
+               ========================================= */
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.faq-question');
+                questionBtn.addEventListener('click', () => {
+                    faqItems.forEach(other => {
+                        if (other !== item) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    item.classList.toggle('active');
+                });
+            });
+
+            /* ==========================================
+               3. CONTACT FORM VALIDATION & WHATSAPP REDIRECT
+               ========================================= */
+            const contactForm = document.getElementById('contactEnquiryForm');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const nameInput = document.getElementById('contactName');
+                    const phoneInput = document.getElementById('contactPhone');
+                    const subjectSelect = document.getElementById('contactSubject');
+                    const messageTextarea = document.getElementById('contactMessage');
+
+                    let isValid = true;
+
+                    if (!nameInput.value.trim()) {
+                        nameInput.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        nameInput.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!phoneInput.value.trim() || phoneInput.value.trim().length < 8) {
+                        phoneInput.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        phoneInput.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!subjectSelect.value) {
+                        subjectSelect.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        subjectSelect.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (!messageTextarea.value.trim()) {
+                        messageTextarea.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    } else {
+                        messageTextarea.closest('.form-group').classList.remove('error');
+                    }
+
+                    if (isValid) {
+                        const name = nameInput.value.trim();
+                        const phone = phoneInput.value.trim();
+                        const subject = subjectSelect.value;
+                        const userMessage = messageTextarea.value.trim();
+
+                        const fullMessage = `Hello MPOWER GYM,\nMy name is ${name}.\nSubject: ${subject}\nContact Number: ${phone}\nMessage: "${userMessage}"`;
+                        
+                        const whatsappUrl = `https://wa.me/918830319462?text=${encodeURIComponent(fullMessage)}`;
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
