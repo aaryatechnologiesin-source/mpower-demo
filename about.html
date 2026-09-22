@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MPOWER GYM | Baramati | Our Story & Training Philosophy</title>
+    <meta name="description" content="Learn more about MPOWER GYM in Baramati, Maharashtra. Discover our story, state-of-the-art strength training and cardio facility, expert mindset, and commitment to fitness.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#ffffff',
+                        accent: '#E63946', // Strong athletic red accent
+                        surface: '#1A1A1A',
+                        surfaceLight: '#262626',
+                        muted: '#A3A3A3'
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'sans-serif'],
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ExerciseGym",
+      "name": "MPOWER GYM",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manpasand Collection, Ambika Nagar, Pushpak Apartment",
+        "addressLocality": "Baramati",
+        "addressRegion": "Maharashtra",
+        "postalCode": "413102",
+        "addressCountry": "IN"
+      },
+      "telephone": "+918830319462",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "05:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "07:00",
+          "closes": "10:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "100"
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        .bg-grain {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(230, 57, 70, 0); }
+        }
+        .whatsapp-pulse {
+            animation: pulseGlow 2s infinite;
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-primary text-secondary selection:bg-accent selection:text-white">
+
+    <!-- NAVBAR -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-2xl sm:text-3xl font-heading font-bold tracking-wider text-white">
+                    MPOWER <span class="text-accent">GYM</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm lg:text-base">
+                <a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="text-accent transition-colors">About</a>
+                <a href="programs.html" class="text-gray-300 hover:text-accent transition-colors">Programs</a>
+                <a href="membership.html" class="text-gray-300 hover:text-accent transition-colors">Membership</a>
+                <a href="contact.html" class="text-gray-300 hover:text-accent transition-colors">Contact</a>
+            </nav>
+
+            <!-- Call Now Button -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:+918830319462" class="flex items-center gap-2 bg-surfaceLight border border-gray-700 hover:border-accent text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md hover:bg-accent group">
+                    <i class="fa-solid fa-phone text-accent group-hover:text-white transition-colors"></i>
+                    <span>+91 88303 19462</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburger-btn" aria-label="Toggle Menu" class="md:hidden text-white text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-surface border-t border-gray-800 p-6 shadow-2xl transition-all">
+            <nav class="flex flex-col space-y-4 font-medium">
+                <a href="index.html" class="text-gray-300 hover:text-accent text-lg py-2 border-b border-gray-800 transition-colors">Home</a>
+                <a href="about.html" class="text-accent text-lg py-2 border-b border-gray-800">About</a>
+                <a href="programs.html" class="text-gray-300 hover:text-accent text-lg py-2 border-b border-gray-800 transition-colors">Programs</a>
+                <a href="membership.html" class="text-gray-300 hover:text-accent text-lg py-2 border-b border-gray-800 transition-colors">Membership</a>
+                <a href="contact.html" class="text-gray-300 hover:text-accent text-lg py-2 transition-colors">Contact</a>
+                <div class="pt-2">
+                    <a href="tel:+918830319462" class="flex items-center justify-center gap-2 bg-accent text-white py-3 rounded-lg font-semibold w-full shadow-lg">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>CALL NOW: +91 88303 19462</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO SECTION -->
+    <section class="relative py-32 sm:py-40 bg-primary overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=1920" 
+                 alt="MPOWER GYM training atmosphere in Baramati" 
+                 class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-black/60"></div>
+            <div class="absolute inset-0 bg-grain opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center mt-6">
+            <div class="inline-flex items-center gap-2 bg-surfaceLight/80 border border-gray-700/60 px-4 py-1.5 rounded-full mb-6 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+                <span class="text-xs sm:text-sm font-semibold tracking-widest text-gray-200">ESTABLISHED IN BARAMATI</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-heading font-bold uppercase tracking-tight text-white mb-6">
+                ABOUT <span class="text-accent">MPOWER GYM</span>
+            </h1>
+            <p class="text-base sm:text-xl text-gray-300 max-w-2xl mx-auto font-normal leading-relaxed">
+                Dedicated to building strength, fostering consistency, and empowering fitness enthusiasts throughout Baramati, Maharashtra.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR STORY SECTION -->
+    <section class="py-24 bg-surface border-t border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-3 block">OUR STORY</span>
+                    <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-6">
+                        BUILT FOR REAL RESULTS.
+                    </h2>
+                    <p class="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
+                        MPOWER GYM was founded with a singular mission: to provide Baramati with a world-class training ground where dedication meets top-tier equipment. We believe that fitness is not a temporary trend, but a lifelong pursuit of strength and character.
+                    </p>
+                    <p class="text-muted text-base mb-8 leading-relaxed">
+                        Located centrally at Ambika Nagar, our facility offers an energetic, focused environment free from distractions. Whether you are stepping onto the gym floor for the very first time or are an experienced athlete pushing new personal records, MPOWER GYM provides the ideal atmosphere to elevate your performance.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-primary border border-gray-800 px-6 py-4 rounded-xl">
+                            <div class="text-2xl font-heading font-bold text-accent mb-1">05:00 AM</div>
+                            <div class="text-xs text-muted">Daily Opening</div>
+                        </div>
+                        <div class="bg-primary border border-gray-800 px-6 py-4 rounded-xl">
+                            <div class="text-2xl font-heading font-bold text-accent mb-1">4.8 ★</div>
+                            <div class="text-xs text-muted">Member Rating</div>
+                        </div>
+                        <div class="bg-primary border border-gray-800 px-6 py-4 rounded-xl">
+                            <div class="text-2xl font-heading font-bold text-accent mb-1">100%</div>
+                            <div class="text-xs text-muted">Focused Vibe</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-accent/10 rounded-3xl filter blur-xl"></div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000" 
+                         alt="MPOWER GYM interior equipment" 
+                         class="relative rounded-2xl shadow-2xl w-full h-[450px] object-cover border border-gray-800">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT MPOWER OFFERS SECTION -->
+    <section class="py-24 bg-primary relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-3 block">FACILITY & AMENITIES</span>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                    WHAT MPOWER OFFERS
+                </h2>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Everything you need to sustain a high-performance training routine in Baramati.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-surface border border-gray-800 rounded-2xl p-8 hover:border-accent/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-surfaceLight rounded-xl flex items-center justify-center text-accent mb-6 text-2xl group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Strength Training Equipment</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Comprehensive weight racks, benches, barbells, and plate-loaded resistance machines.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface border border-gray-800 rounded-2xl p-8 hover:border-accent/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-surfaceLight rounded-xl flex items-center justify-center text-accent mb-6 text-2xl group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Cardio Zone</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Treadmills and cardio equipment designed to boost stamina and burn fat efficiently.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface border border-gray-800 rounded-2xl p-8 hover:border-accent/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-surfaceLight rounded-xl flex items-center justify-center text-accent mb-6 text-2xl group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-person-biking"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Cycling Studio</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Dedicated cycling setups for high-intensity cardio intervals and endurance building.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface border border-gray-800 rounded-2xl p-8 hover:border-accent/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-surfaceLight rounded-xl flex items-center justify-center text-accent mb-6 text-2xl group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Air-Conditioned Floor</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Fully air-conditioned workout environment ensuring comfort during rigorous training sessions.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-surface border border-gray-800 rounded-2xl p-8 hover:border-accent/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-surfaceLight rounded-xl flex items-center justify-center text-accent mb-6 text-2xl group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Parking Facility</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Ample and secure space to park your vehicles conveniently when arriving at the gym.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-surface border border-gray-800 rounded-2xl p-8 hover:border-accent/50 transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-surfaceLight rounded-xl flex items-center justify-center text-accent mb-6 text-2xl group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-glass-water"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Hydration & Support</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Clean drinking water coolers and supportive staff available to assist you throughout your workout.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINING MINDSET SECTION -->
+    <section class="py-24 bg-surface border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-3 block">OUR PHILOSOPHY</span>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                    THE TRAINING MINDSET
+                </h2>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Three core principles that guide every single workout at MPOWER GYM.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Principle 1 -->
+                <div class="bg-primary border border-gray-800 p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <div class="bg-accent/20 text-accent font-heading font-bold text-3xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">
+                        01
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-2">Consistency Over Intensity</h3>
+                        <p class="text-muted text-base leading-relaxed">
+                            Showing up day after day is what builds legendary results. Flashy workouts mean nothing without the discipline to repeat them consistently.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="bg-primary border border-gray-800 p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <div class="bg-accent/20 text-accent font-heading font-bold text-3xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">
+                        02
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-2">Form & Technique First</h3>
+                        <p class="text-muted text-base leading-relaxed">
+                            Protecting your body and maximizing muscle activation through correct form ensures long-term progress without injury setbacks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="bg-primary border border-gray-800 p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <div class="bg-accent/20 text-accent font-heading font-bold text-3xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">
+                        03
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-2">Community & Grit</h3>
+                        <p class="text-muted text-base leading-relaxed">
+                            Surround yourself with driven individuals who push past boundaries and motivate each other to become stronger every single week.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITY HIGHLIGHTS GALLERY -->
+    <section class="py-24 bg-primary relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-3 block">GYM FLOOR</span>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                    FACILITY HIGHLIGHTS
+                </h2>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    A glimpse into the training atmosphere at MPOWER GYM, Baramati.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative overflow-hidden rounded-2xl group border border-gray-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" 
+                         alt="MPOWER GYM Workout Floor" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-heading font-bold text-xl text-white">Main Training Floor</span>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl group border border-gray-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=800" 
+                         alt="MPOWER GYM Equipment" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-heading font-bold text-xl text-white">Strength & Weights</span>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl group border border-gray-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800" 
+                         alt="MPOWER GYM Fitness Zone" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="font-heading font-bold text-xl text-white">Cardio & Cycling Setup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IS MPOWER FOR SECTION -->
+    <section class="py-24 bg-surface border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-3 block">AUDIENCE</span>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                    WHO IS MPOWER FOR?
+                </h2>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Our gym welcomes everyone committed to improving their physical conditioning.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-primary border border-gray-800 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-surfaceLight rounded-full flex items-center justify-center text-accent mx-auto mb-6 text-2xl">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Beginners</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Individuals starting their fitness journey who need a welcoming environment and quality equipment.
+                    </p>
+                </div>
+
+                <div class="bg-primary border border-gray-800 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-surfaceLight rounded-full flex items-center justify-center text-accent mx-auto mb-6 text-2xl">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Strength Enthusiasts</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Lifters and bodybuilders looking to build serious muscle, stamina, and push past plateaus.
+                    </p>
+                </div>
+
+                <div class="bg-primary border border-gray-800 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-surfaceLight rounded-full flex items-center justify-center text-accent mx-auto mb-6 text-2xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Fitness & Cardio Seekers</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Anyone focused on maintaining an active lifestyle, improving heart health, and burning calories.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF SECTION -->
+    <section class="py-24 bg-primary relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-surface border border-gray-800 rounded-3xl p-10 sm:p-16 shadow-2xl max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-1.5 rounded-full mb-6 font-semibold text-sm">
+                    <i class="fa-solid fa-star"></i> 4.8 RATING • 100+ REVIEWS
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                    TRUSTED BY BARAMATI
+                </h2>
+                <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto mb-8">
+                    See what our members have to say about their workouts, equipment, and experience at MPOWER GYM.
+                </p>
+                <!-- Google review placeholder URL -->
+                <a href="https://www.google.com/search?q=MPOWER+GYM+Baramati+reviews" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-white font-heading font-bold text-base px-8 py-4 rounded-xl shadow-xl transition-all">
+                    <i class="fa-brands fa-google text-xl"></i>
+                    <span>READ GOOGLE REVIEWS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE TRIAL CTA SECTION -->
+    <section class="py-20 bg-surface border-t border-gray-800 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="bg-primary border border-gray-800 rounded-3xl p-10 sm:p-16 shadow-2xl relative">
+                <h2 class="text-3xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                    READY TO EXPERIENCE MPOWER?
+                </h2>
+                <p class="text-gray-300 text-base sm:text-xl max-w-xl mx-auto mb-8">
+                    Claim your free trial session today and explore our workout floor in Baramati.
+                </p>
+                <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20would%20like%20to%20know%20more%20about%20the%20free%20trial." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-white font-heading font-bold text-lg px-8 py-4 rounded-xl shadow-xl transition-all hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>ASK ABOUT FREE TRIAL</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION MINI SECTION -->
+    <section class="py-20 bg-primary border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-3 block">LOCATION</span>
+            <h2 class="text-3xl sm:text-4xl font-heading font-bold uppercase tracking-tight text-white mb-4">
+                VISIT OUR GYM IN BARAMATI
+            </h2>
+            <p class="text-muted text-base max-w-xl mx-auto mb-8">
+                Manpasand Collection, Ambika Nagar, Pushpak Apartment, Baramati, Maharashtra – 413102
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="https://www.google.com/maps/search/?api=1&query=Manpasand+Collection+Ambika+Nagar+Pushpak+Apartment+Baramati+Maharashtra+413102" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="bg-surface hover:bg-surfaceLight border border-gray-700 text-white font-heading font-bold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-accent"></i>
+                    <span>GET DIRECTIONS</span>
+                </a>
+                <a href="tel:+918830319462" 
+                   class="bg-accent hover:bg-accent/90 text-white font-heading font-bold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 88303 19462</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary border-t border-gray-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <span class="text-2xl font-heading font-bold tracking-wider text-white">
+                            MPOWER <span class="text-accent">GYM</span>
+                        </span>
+                    </a>
+                    <p class="text-muted text-sm mb-4">“Train Hard. Live Strong.”</p>
+                    <div class="flex space-x-3 text-gray-400">
+                        <a href="https://wa.me/918830319462" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-surface rounded-lg flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+918830319462" class="w-10 h-10 bg-surface rounded-lg flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition-colors">About</a></li>
+                        <li><a href="programs.html" class="hover:text-accent transition-colors">Programs</a></li>
+                        <li><a href="membership.html" class="hover:text-accent transition-colors">Membership</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-white mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><i class="fa-solid fa-phone text-accent mr-2"></i> +91 88303 19462</li>
+                        <li><i class="fa-solid fa-location-dot text-accent mr-2"></i> Baramati, Maharashtra</li>
+                        <li><i class="fa-solid fa-clock text-accent mr-2"></i> Mon–Sat: 5:00 AM – 10:00 PM</li>
+                        <li><i class="fa-solid fa-clock text-accent mr-2"></i> Sun: 7:00 AM – 10:00 AM</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-white mb-4">MPOWER GYM</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Dedicated fitness facility providing modern equipment, strength training, and professional guidance in Baramati.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-muted gap-4">
+                <div>
+                    © 2026 MPOWER GYM. All rights reserved.
+                </div>
+                <div>
+                    Website concept by Aarya Technologies
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/918830319462?text=Hello%20MPOWER%20GYM,%20I%20would%20like%20to%20know%20more%20about%20membership." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Chat with MPOWER GYM on WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl whatsapp-pulse transition-all group">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-full mr-3 bg-surface border border-gray-700 text-white text-xs px-3 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-medium">
+            Chat with MPOWER GYM
+        </span>
+    </a>
+
+    <!-- JavaScript for Mobile Menu & Navbar Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 40) {
+                navbar.classList.add('bg-primary/95', 'nav-blur', 'shadow-lg', 'py-3');
+                navbar.classList.remove('bg-transparent', 'py-4');
+            } else {
+                navbar.classList.remove('bg-primary/95', 'nav-blur', 'shadow-lg', 'py-3');
+                navbar.classList.add('bg-transparent', 'py-4');
+            }
+        });
+
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = hamburgerBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hamburgerBtn.querySelector('i').classList.remove('fa-xmark');
+                hamburgerBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
